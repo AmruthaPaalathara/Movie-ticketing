@@ -128,7 +128,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li class="nav-item"><a class="nav-link" href="#movies" onclick="showMoviesPage()">Movies</a></li>
                 <li class="nav-item"><a  class="nav-link"href="#blog" onclick="showBlogPage()">Blog</a></li>
                 <li class="nav-item"><a  class="nav-link"href="#seats" onclick="showSeatsPage()">Seat View</a></li>
-                <li class="nav-item"><a  class="nav-link"href="#cardDetailsModal" onclick="showFormPage()">form</a></li>
+                <li class="nav-item"><a  class="nav-link"href="#register.html" onclick="showFormPage()">form</a></li>
             </ul>
         </nav>
     </header>
@@ -244,10 +244,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             document.getElementById('seats').style.display="none"
         }
 
-       function showFormPage() {
-            hideAllSections();
-            document.getElementById('cardDetailsModal').style.display="block"
-        }
+       // function showFormPage() {
+       //      hideAllSections();
+       //      document.getElementById('cardDetailsModal').style.display="block"
+       //  }
         function toggleSeat(event) {
             const seat=event.target;
             if (seat.classList.contains('seat') && seat.dataset.status==='empty') {
@@ -259,11 +259,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }
         }
 
-       document.getElementById('submit-payment').addEventListener('click', function() {
+       // document.getElementById('submit-payment').addEventListener('click', function() {
                 // You can add payment processing logic here
 
                 // Redirect to thankyou.html after submitting payment
-                window.location.href = 'index.html';
+                // window.location.href = 'index.html';
             });
         </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
