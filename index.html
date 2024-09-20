@@ -128,7 +128,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li class="nav-item"><a class="nav-link" href="#movies" onclick="showMoviesPage()">Movies</a></li>
                 <li class="nav-item"><a  class="nav-link"href="#blog" onclick="showBlogPage()">Blog</a></li>
                 <li class="nav-item"><a  class="nav-link"href="#seats" onclick="showSeatsPage()">Seat View</a></li>
-                <li class="nav-item"><a  class="nav-link"href="#payment-form" onclick="showSeatsPage()">form</a></li>
+                <li class="nav-item"><a  class="nav-link"href="#cardDetailsModal" onclick="showFormPage()">form</a></li>
             </ul>
         </nav>
     </header>
@@ -242,6 +242,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             document.getElementById('movies').style.display="none"
             document.getElementById('blog').style.display="none"
             document.getElementById('seats').style.display="none"
+        }
+
+       function showFormPage() {
+            hideAllSections();
+            document.getElementById('cardDetailsModal').style.display="block"
         }
         function toggleSeat(event) {
             const seat=event.target;
