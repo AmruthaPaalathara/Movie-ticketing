@@ -178,6 +178,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
         </div>
 
+    <div class="modal" id="cardDetailsModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Enter Card Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="payment-form">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" class="form-control" id="card-number" placeholder="Enter card number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-expiry">Expiry Date (MM/YYYY)</label>
+                                <input type="text" class="form-control" id="card-expiry" placeholder="MM/YYYY" required pattern="^(0[1-9]|1[0-2])\/\d{4}$" title="Format: MM/YYYY" style="text-align: center;">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-cvc">CVC</label>
+                                <input type="password" class="form-control" id="card-cvc" placeholder="Enter CVC" required>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="submit-payment" style="background-color: rgb(3,117,123);">Submit Payment</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
     <footer>
         <p>&copy; 2023 Movie Ticketing</p>
     </footer>
