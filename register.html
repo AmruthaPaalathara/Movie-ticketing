@@ -64,6 +64,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </form>
     </div>
+
+         <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Check if passwords match
+            if (password !== document.getElementById('re-password').value.trim()) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            // Store user data in localStorage (for demo purposes)
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push({ username, password });
+            localStorage.setItem('users', JSON.stringify(users));
+
+            // Redirect to login page after registration
+            window.location.href = 'index.html'; // Ensure this path is correct
+        });
+    </script>
 </body>
 
 </html>
